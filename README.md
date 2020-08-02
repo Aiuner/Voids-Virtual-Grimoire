@@ -75,6 +75,25 @@ The project will utilize at least 6 components, some of which may for different 
 |  :--------:  | :-----------: | :------------- | :-------------------------------------- |
 | Airtable API |      yes      | _airtable.com_ | _https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201/recoCi3kPqFyptlDm_ |
 
+_Example Response_
+```
+{
+    "id": "recoCi3kPqFyptlDm",
+    "fields": {
+        "Categories": [
+            "recipe",
+            "herbs",
+            "beverages"
+        ],
+        "Title": "Elderberry Mint Sun Tea",
+        "Materials or Ingredients": "- 1/4 cup of dried mint leaves\n- 1/2 cup of crushed dried elderberries\n- 2 Tbsp of dried orange or lemon peel\n- 1 quart of pure filtered water\n- A con...",
+        "Directions": "- Add the ingredients in a large tea bag or infuser. If you do not have either of these, you can skip this step. You will have to strain out the ingre...",
+        "Text": "Sun Tea is a fun little treat to make during the summer, where you can use the heat of the sun to steep the herbs. \n\nYou can use any herbal blend you ..."
+    },
+    "createdTime": "2020-08-02T19:46:54.000Z"
+}
+```
+
 <br>
 
 #### Component Hierarchy
@@ -84,17 +103,15 @@ The project will utilize at least 6 components, some of which may for different 
 ```
 src
 |__ assets/
-      |__ data-tests
       |__ fonts
       |__ graphics
       |__ images
-      |__ mockups
 |__ components/
       |__ Header.jsx
-      |__ Hero.jsx
-      |__ Ipsum.jsx
-      |__ Lorem.jsx
-      |__ CTA.jsx
+      |__ NavBar.jsx
+      |__ Search.jsx
+      |__ Posts.jsx
+      |__ ViewPost.jsx
       |__ Footer.jsx
 ```
 
@@ -106,11 +123,12 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Header    | functional |   n   |   n   | _The header will appear at the top of the page and contain the NavBar and my logo._               |
+|  NavBar      | functional |   n   |   n   | _The NavBar will provide links to each category, the home page, and contain the Search bar._       |
+|   Search     |   class    |   y   |   n   | _The Search component will provide a way to search the content saved to the Airtable database via either keyword or category.._
+|   Posts      |   class    |   y   |   n   | _The Posts component will render the posts using flexbox. It will display either all posts or Search results in order of most recent to oldest._      |
+| ViewPost     | functional |   n   |   y   | _Takes props to render a single post with all its info._                 |
+|    Footer    | functional |   n   |   n   | _The footer will contain contact info and link back to my portfolio._ |
 
 <br>
 
@@ -122,9 +140,13 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Add Contact Form    |    L     |     3 hrs      |      ---      |     TBD     |
+| Create CRUD Actions |    H     |     3 hrs      |      ---      |     TBD     |
+|
+|
+|
+|
+| TOTAL               |          |     - hrs      |      ---      |     TBD     |
 
 <br>
 
@@ -140,10 +162,11 @@ src
 
 ### Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+>Potential additions to the project.
 
 - _Add user account and auth capabilities._
-- _Utilize the Giphy API to welcome new users with funny gifs._
+- _Show thumbnails for image embeds on posts._
+- _Change over the post layout to a Masonry style layout, (i.e. Pinterest.)_
 
 <br>
 
