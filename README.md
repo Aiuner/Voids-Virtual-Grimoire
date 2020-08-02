@@ -2,7 +2,7 @@
 
 **Void's Virtual Grimoire** is a digital version of parts of my Grimoire that I have deemed appropriate to share publicly. It consists of correspondences, recipes, DIY instructions, and resources I have found or created for use in my craft. Many of the items listed are of a mundane nature and may be useful to anyone, not just spiritual people. 
 
-The project will make use of React.js, React Router, Airtable and the Airtable API in order to build an interactive webapp. I will be taking a mobile-first approach, but I do intend to try to make it look aesthetically pleasing and interesting on all devices, with visual assets suited to a Grimoire. 
+The project will make use of React.js, React Router, Axios, Airtable and the Airtable API in order to build an interactive webapp. I will be taking a mobile-first approach, but I do intend to try to make it look aesthetically pleasing and interesting on all devices, with visual assets suited to a Grimoire. 
 
 <br>
 
@@ -40,7 +40,7 @@ The project will make use of React.js, React Router, Airtable and the Airtable A
 
 > The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-The **Void's Virtual Grimoire** MVP will focus on creating a web application that works on small screen sizes, mainly smartphones, without looking or feeling clunky. The application will be built in React.js and it will be able to GET content from and POST new content to its Airtable database. The content will be organized into categories, which can be used as search criteria or to view only certain types of content.
+The **Void's Virtual Grimoire** MVP will focus on creating a web application that works on small screen sizes, mainly smartphones, without looking or feeling clunky. The application will be built in React.js and it will use Axios requests to GET content from and POST new content to its Airtable database. The content will be organized into categories, which can be used as search criteria or to view only certain types of content.
 
 The project will utilize at least 6 components, some of which may for different pages while others may be reusable code. The project will utilize React Router to link the page components together.
 
@@ -60,11 +60,10 @@ The project will utilize at least 6 components, some of which may for different 
 
 > Use this section to list all supporting libraries and their role in the project.
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Spring   | _Lorem ipsum dolor sit amet, consectetur._ |
+|     Library      | Description                                                       |
+| :--------------: | :---------------------------------------------------------------- |
+|   React Router   | _Used to link pages together in the application._                 |
+|   Axios          | _Used to interface with an external API, performs CRUD commands._ |
 
 <br>
 
@@ -72,9 +71,9 @@ The project will utilize at least 6 components, some of which may for different 
 
 > Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
 
-|    API     | Quality Docs? | Website       | Sample Query                            |
-| :--------: | :-----------: | :------------ | :-------------------------------------- |
-| WeatherAPI |      yes      | _example.com_ | _example.com/mickeymouse?s=movies&t=10_ |
+|     API      | Quality Docs? | Website        | Sample Query                            |
+|  :--------:  | :-----------: | :------------- | :-------------------------------------- |
+| Airtable API |      yes      | _airtable.com_ | _https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201/recoCi3kPqFyptlDm_ |
 
 <br>
 
