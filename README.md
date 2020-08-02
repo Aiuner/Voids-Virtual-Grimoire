@@ -1,6 +1,8 @@
 ### Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+**Void's Virtual Grimoire** is a digital version of parts of my Grimoire that I have deemed appropriate to share publicly. It consists of correspondences, recipes, DIY instructions, and resources I have found or created for use in my craft. Many of the items listed are of a mundane nature and may be useful to anyone, not just spiritual people. 
+
+The project will make use of React.js, React Router, Airtable and the Airtable API in order to build an interactive webapp. I will be taking a mobile-first approach, but I do intend to try to make it look aesthetically pleasing and interesting on all devices, with visual assets suited to a Grimoire. 
 
 <br>
 
@@ -38,7 +40,7 @@ _**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum ri
 
 > The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+The **Void's Virtual Grimoire** MVP will focus on creating a web application that works on small screen sizes, mainly smartphones, without looking or feeling clunky. The application will be built in React.js and it will be able to GET content from and POST new content to its Airtable database. The project will utilize at least 6 components, some of which may for different pages while others may be reusable code. The project will utilize React Router to link the page components together.
 
 <br>
 
