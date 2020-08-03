@@ -1,4 +1,4 @@
-### Overview
+## Overview
 
 **Void's Virtual Grimoire** is a digital version of parts of my Grimoire that I have deemed appropriate to share publicly. It consists of correspondences, recipes, DIY instructions, and resources I have found or created for use in my craft. Many of the items listed are of a mundane nature and may be useful to anyone, not just spiritual people. 
 
@@ -48,11 +48,10 @@ The project will utilize at least 6 components, some of which may for different 
 
 #### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Create an interactive webapp to display content sourced from an Airtable database._
+- _Utilize React.js to make at least 6 components which will be used to collect and display information from the database._
+- _Follow a mobile-first approach to make an intuitive webapp._
+- _Navigate objects returned from the Airtable API via axios requests._
 
 <br>
 
@@ -138,15 +137,19 @@ src
 >
 > Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |      ---      |     TBD     |
-| Create CRUD Actions |    H     |     3 hrs      |      ---      |     TBD     |
-|
-|
-|
-|
-| TOTAL               |          |     - hrs      |      ---      |     TBD     |
+| Task                      | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------  | :------: | :------------: | :-----------: | :---------: |
+| Header                    |    H     |     <1 hr      |      ---      |     TBD     |
+| NavBar                    |    H     |     <1 hr      |      ---      |     TBD     |
+| Search                    |    -     |     -----      |      ---      |     TBD     |
+| - Set Up Search functions |    M     |     2 hrs      |      ---      |     TBD     |
+| - Set up Axios requests   |    M     |     6 hrs      |      ---      |     TBD     |    
+| Posts                     |    -     |     -----      |      ---      |     TBD     |
+| - Set Up Axios request    |    H     |     6 hrs      |      ---      |     TBD     |
+| - Render data to the DOM  |    H     |     2 hrs      |      ---      |     TBD     |
+| ViewPost                  |    H     |     2 hrs      |      ---      |     TBD     |
+| Footer                    |    L     |     <1 hr      |      ---      |     TBD     |
+| TOTAL                     |   ---    |     - hrs      |      ---      |     TBD     |
 
 <br>
 
@@ -154,9 +157,9 @@ src
 
 > Use this section to document all helper functions– generic functions that can be reused in other applications.
 
-|  Function  | Description                                |
-| :--------: | :----------------------------------------- |
-| Capitalize | _Lorem ipsum dolor sit amet, consectetur._ |
+|  Function    | Description                                |
+| :--------:   | :----------------------------------------- |
+| handleChange | _Updates the search field input so that when you click submit, it has something to submit._ |
 
 <br>
 
