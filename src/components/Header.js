@@ -1,8 +1,13 @@
 import React from 'react';
+import NavBar from './NavBar'
 
 function Header() {
 
-  return
+  return (
+    <>
+      <NavBar />
+    </>
+  )
 }
 
 export default Header;
