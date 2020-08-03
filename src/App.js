@@ -19,6 +19,10 @@ function App() {
         <Home />
       </Route>
 
+      <Route path="/posts">
+        <Posts />
+      </Route>
+
       <Route path="/posts/:title">
         <ViewPost />
       </Route>
