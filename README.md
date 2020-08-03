@@ -10,29 +10,9 @@ The project will make use of React.js, React Router, Axios, Airtable and the Air
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Dummy Link](url)
+![Mobile Wireframes](https://media.discordapp.net/attachments/447199538105810945/739826698970988604/image0.jpg?width=681&height=908)
 
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Body
-
-![Dummy Link](url)
-
-- Desktop Resource Index
-
-![Dummy Link](url)
-
-- Desktop Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Displays four wireframes for the mobile version. Desktop will look very similar.
 
 <br>
 
