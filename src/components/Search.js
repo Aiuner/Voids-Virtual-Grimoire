@@ -2,7 +2,7 @@ import React from 'react';
 
 function Search() {
 
-  return
+  return null;
 }
 
 export default Search;

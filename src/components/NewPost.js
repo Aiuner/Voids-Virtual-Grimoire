@@ -2,7 +2,7 @@ import React from 'react';
 
 function NewPost() {
 
-  return
+  return null;
 }
 
 export default NewPost;

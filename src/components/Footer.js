@@ -4,7 +4,9 @@ function Footer() {
 
   return (
     <>
-      <h2>Contact information & links go down here.</h2>
+      <footer>
+        <h2>Contact information & links go down here.</h2>
+      </footer>
     </>
   )
 }
