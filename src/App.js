@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
-import Posts from './components/Posts'
+import AllPosts from './components/AllPosts'
 import ViewPost from './components/ViewPost'
 import NewPost from './components/NewPost'
 import Footer from './components/Footer'
@@ -19,11 +19,11 @@ function App() {
         <Home />
       </Route>
 
-      <Route path="/posts">
-        <Posts />
+      <Route path="/posts" exact>
+        <AllPosts />
       </Route>
 
-      <Route path="/posts/:title">
+      <Route path="/posts/:id">
         <ViewPost />
       </Route>
 

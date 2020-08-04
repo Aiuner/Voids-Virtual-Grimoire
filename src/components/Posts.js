@@ -1,66 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ViewPost from './ViewPost'
 import axios from 'axios';
 
 
-function Posts(props) {
+function Posts() {
   const [posts, updatePosts] = useState([]);
   const [fetchPosts, updateFetchPosts] = useState(false);
-
+  let url = null;
+  if (window.location.pathname === "/") {
+    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?maxRecords=7&view=Grid%20view";
+  }
+  else if (window.location.pathname === "/posts") {
+    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?view=Grid%20view";
+  }
+  else {
+    console.log("Error: The Posts component has been called but I don't know what to do for this pathname.")
+  }
 
   useEffect(() => {
-    let postsData = [];
-
     const apiCall = async () => {
-
-      if (window.location.pathname === "/") {
-        console.log("This version of Posts runs if we're on the Home page.");
-
-        postsData = await axios.get(
-          "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?maxRecords=3&view=Grid%20view",
+        let postsData = await axios.get(`${url}`,
           {
             headers: {
               'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
             },
-          }
-        );
-        console.log(postsData);
-        updatePosts(postsData.data.records);
-        return postsData;
-      } 
-      else if (window.location.pathname === "/posts") {
-        console.log("This version of Posts runs if we're in /posts .");
-
-        postsData = await axios.get(
-          "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?view=Grid%20view",
-          {
-            headers: {
-              'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
-            },
-          }
-        );
-        console.log(postsData);
-        updatePosts(postsData.data.records);
-        return postsData;
-      } 
-      else {
-        console.log("Error in Posts Switch.");
-
-        return null;
-      }
-    }
+          });
+        //console.log(postsData.data.records);
+        updatePosts(postsData.data.records); 
+        }
     apiCall();
-  }, [fetchPosts]);
+  }, [fetchPosts, url]);
 
   return (
     <>
       <main>
         <h1>Posts Component puts stuff here.</h1>
-        {posts.map( post =>
-        <>
-          <ViewPost post={post} key={post.id}/>
-        </>
+        {posts.map( post => <>
+            <div className="postcard">
+              <Link to={`/posts/${post.id}`}>
+                <h2>{post.fields.Title} - {post.fields.created_at}</h2>
+              </Link>
+              <p>{post.fields.Text}</p>
+            </div>
+          </>
         )}
       </main>
     </>
