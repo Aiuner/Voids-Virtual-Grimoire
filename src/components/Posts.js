@@ -8,10 +8,10 @@ function Posts() {
   const [fetchPosts, updateFetchPosts] = useState(false);
   let url = null;
   if (window.location.pathname === "/") {
-    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?maxRecords=7&view=Grid%20view";
+    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?maxRecords=7&view=Grid%20view&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc";
   }
   else if (window.location.pathname === "/posts") {
-    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?view=Grid%20view";
+    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?view=Grid%20view&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc";
   }
   else {
     console.log("Error: The Posts component has been called but I don't know what to do for this pathname.")
@@ -38,7 +38,7 @@ function Posts() {
         {posts.map( post => <>
             <div className="postcard">
               <Link to={`/posts/${post.id}`}>
-                <h2>{post.fields.Title} - {post.fields.created_at}</h2>
+                <h2>{post.fields.Title} - {post.fields.Date}</h2>
               </Link>
               <p>{post.fields.Text}</p>
             </div>

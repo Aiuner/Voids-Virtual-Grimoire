@@ -28,7 +28,7 @@ function ViewPost() {
       <>
         <div className="full-post">
           <h2>
-            {post.fields.Title} - {post.fields.created_at}
+            {post.fields.Title} - {post.fields.Date}
           </h2>
           <p>{post.fields.Text}</p>
           <p>{post.fields.MaterialsOrIngredients}</p>
