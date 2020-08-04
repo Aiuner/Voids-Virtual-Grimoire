@@ -4,7 +4,7 @@ import axios from 'axios'
 
 function ViewPost() {
   const params = useParams();
-  console.log(params);
+  //console.log(params);
   const [post, updatePost] = useState({});
 
   useEffect(() => {
@@ -23,6 +23,16 @@ function ViewPost() {
     apiCall();
   }, [params]);
 
+  const deletePost = async () => {
+    const data = await axios.delete(`https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201/${params.id}`, {
+      headers: {
+        'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`
+      }
+    });
+    updatePost(!post);
+    window.location.href="/";
+  }
+
   if (post.fields) {
     return (
       <>
@@ -33,6 +43,7 @@ function ViewPost() {
           <p>{post.fields.Text}</p>
           <p>{post.fields.MaterialsOrIngredients}</p>
           <p>{post.fields.Directions}</p>
+          <button onClick={deletePost}>Delete This Post</button>
         </div>
       </>
     );
