@@ -17,7 +17,7 @@ function ViewPost() {
           },
         }
       );
-      console.log(data.data);
+      //console.log(data.data);
       updatePost(data.data);
     };
     apiCall();

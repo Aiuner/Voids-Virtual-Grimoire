@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import '../assets/Posts.css'
 
 
 function Posts(props) {
@@ -12,6 +13,9 @@ function Posts(props) {
   }
   else if (window.location.pathname === "/posts") {
     url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?view=Grid%20view&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc";
+  }
+  else if (window.location.pathname === "/search_results") {
+    url = props.searchurl;
   }
   else {
     console.log("Error: The Posts component has been called but I don't know what to do for this pathname.")
@@ -34,12 +38,12 @@ function Posts(props) {
   return (
     <>
       <main>
-        <h1>Posts Component puts stuff here.</h1>
         {posts.map( post => <>
             <div className="postcard">
               <Link to={`/posts/${post.id}`}>
-                <h2>{post.fields.Title} - {post.fields.Date}</h2>
+                <h2>{post.fields.Title}</h2>
               </Link>
+              <h3>{post.fields.Date}</h3>
               <p>{post.fields.Text}</p>
             </div>
           </>

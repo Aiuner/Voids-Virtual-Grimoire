@@ -1,0 +1,36 @@
+header {
+  height: 18vh;
+  border-bottom: 2px solid black;
+  background: grey;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: indigo;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:selected {
+  color: blue;
+}
+
+a:hover {
+  color: fuchsia;
+}
+
+h1 {
+  margin: 0 auto;
+  color: white;
+}
+
+h2 {
+  font-size: 4vh;
+}
+
+h3 {
+  font-size: 2vh;
+}

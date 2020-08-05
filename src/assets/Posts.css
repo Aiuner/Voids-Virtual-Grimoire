@@ -1,0 +1,11 @@
+main {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.postcard {
+  margin: 2.5vh auto;
+  width: 90vw;
+  border: 2px solid black;
+  background: lightgrey;
+}

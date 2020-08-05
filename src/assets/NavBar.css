@@ -1,0 +1,16 @@
+nav {
+  position: absolute;
+  bottom: 0;
+}
+
+a {
+  margin: 0 0.5vw;
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+  }
+}

@@ -124,11 +124,11 @@ src
 | Header Section            |    H     |     <1 hr      |     <1 hr     |     TBD     |
 | NavBar                    |    H     |     <1 hr      |     <1 hr     |     TBD     |
 | Search                    |    -     |     -----      |      ---      |     TBD     |
-| - Set Up Search functions |    M     |     2 hrs      |      ---      |     TBD     |
-| - Set up Axios requests   |    M     |     6 hrs      |      ---      |     TBD     |    
+| - Set Up Search functions |    M     |     2 hrs      |      1 hr     |     TBD     |
+| - Set up Axios requests   |    M     |     6 hrs      |     <1 hr     |     TBD     |    
 | Posts                     |    -     |     -----      |      ---      |     TBD     |
 | - Set Up Axios request    |    H     |     6 hrs      |     4 hrs     |     TBD     |
-| - Render data to the DOM  |    H     |     2 hrs      |     1 hr      |     TBD     |
+| - Render data to the DOM  |    H     |     2 hrs      |      1 hr     |     TBD     |
 | ViewPost                  |    H     |     2 hrs      |     <1 hr     |     TBD     |
 | Footer                    |    L     |     <1 hr      |      ---      |     TBD     |
 | TOTAL                     |   ---    |     - hrs      |      ---      |     TBD     |
