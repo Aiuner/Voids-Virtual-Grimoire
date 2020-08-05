@@ -89,9 +89,7 @@ src
       |__ Header.jsx
       |__ NavBar.jsx
       |__ Search.jsx
-      |__ Home.jsx
       |__ Posts.jsx
-      |__ AllPosts.jsx
       |__ ViewPost.jsx
       |__ NewPost.jsx
       |__ Footer.jsx
@@ -105,12 +103,10 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will appear at the top of the page and contain the NavBar and my logo._               |
-|  NavBar      | functional |   n   |   n   | _The NavBar will provide links to each category, the home page, and contain the Search bar._       |
+|  NavBar      | functional |   n   |   n   | _The NavBar will provide links to each category, the home page, and contain the Search bar. It will appear in the page Header in app.js._       |
 |   Search     |   class    |   y   |   n   | _The Search component will provide a way to search the content saved to the Airtable database via either keyword or category.._ |
 |    Home    | functional |   n   |   n   | _The Home component is just the landing page. Displays the most recent 7 posts._               |
-|   Posts      |   class    |   y   |   n   | _The Posts component will render the posts using flexbox. It will display either all posts or Search results in order of most recent to oldest._      |
-|    AllPosts    | functional |   n   |   n   | _A separate page that displays all the posts that have been made, most recent first._               |
+|   Posts      |   class    |   y   |   n   | _The Posts component will render the posts using flexbox. It will display either all posts, some posts or Search results in order of most recent to oldest depending on the pathname._      |
 | ViewPost     | functional |   n   |   n   | _Takes params to render a single post with all its info._                 |
 |    NewPost    | functional |   n   |   n   | _Used to create new posts to the airtable. Has its own page._               |
 |    Footer    | functional |   n   |   n   | _The footer will contain contact info and link back to my portfolio._ |
@@ -125,7 +121,7 @@ src
 
 | Task                      | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------  | :------: | :------------: | :-----------: | :---------: |
-| Header                    |    H     |     <1 hr      |     <1 hr     |     TBD     |
+| Header Section            |    H     |     <1 hr      |     <1 hr     |     TBD     |
 | NavBar                    |    H     |     <1 hr      |     <1 hr     |     TBD     |
 | Search                    |    -     |     -----      |      ---      |     TBD     |
 | - Set Up Search functions |    M     |     2 hrs      |      ---      |     TBD     |

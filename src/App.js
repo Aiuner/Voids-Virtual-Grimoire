@@ -1,8 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
-import Header from './components/Header'
-import Home from './components/Home'
-import AllPosts from './components/AllPosts'
+import NavBar from './components/NavBar'
+import Posts from './components/Posts'
 import ViewPost from './components/ViewPost'
 import NewPost from './components/NewPost'
 import Footer from './components/Footer'
@@ -13,14 +12,17 @@ import './App.css';
 function App() {
   return (
     <>
-      <Header />
+      <header>
+        <h1>Logo and Name go up here.</h1>
+        <NavBar />
+      </header>
 
       <Route path="/" exact>
-        <Home />
+        <Posts />
       </Route>
 
       <Route path="/posts" exact>
-        <AllPosts />
+        <Posts />
       </Route>
 
       <Route path="/posts/:id">

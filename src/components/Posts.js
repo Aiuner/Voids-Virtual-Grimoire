@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-function Posts() {
+function Posts(props) {
   const [posts, updatePosts] = useState([]);
   const [fetchPosts, updateFetchPosts] = useState(false);
   let url = null;
