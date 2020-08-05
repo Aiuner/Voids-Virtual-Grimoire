@@ -1,11 +1,18 @@
+body {
+  background: url('./assets/parchment-paper-bg.png') no-repeat fixed center;
+  background-size: cover;
+}
+
 header {
+  margin: 0 auto;
   height: 18vh;
   border-bottom: 2px solid black;
-  background: grey;
+  background:  rgba(0,0,0,0.5);
   position: relative;
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: indigo;
 }
@@ -24,13 +31,22 @@ a:hover {
 
 h1 {
   margin: 0 auto;
+  font-size: 5vh;
   color: white;
 }
 
 h2 {
+  margin: 0 auto;
   font-size: 4vh;
 }
 
 h3 {
+  margin: 0 auto;
   font-size: 2vh;
+}
+
+footer {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #000000;
 }

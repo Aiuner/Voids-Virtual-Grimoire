@@ -16,6 +16,7 @@ function App() {
   return (
     <>
       <header>
+        <img src="assets/Logo.png"></img>
         <h1>Logo and Name go up here.</h1>
         <NavBar setSearchurl={setSearchurl}/>
       </header>

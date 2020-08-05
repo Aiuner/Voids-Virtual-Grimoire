@@ -1,6 +1,21 @@
 nav {
   position: absolute;
+  width: 100vw;
+  text-align: right;
+  background-color: #000000;
+  padding: 1vh 0;
+}
+
+form {
+  display: inline;
+}
+
+.page-top {
   bottom: 0;
+}
+
+.page-bottom {
+  top: 0;
 }
 
 a {
@@ -10,7 +25,6 @@ a {
 @media screen and (min-width: 800px) {
   nav {
     position: absolute;
-    bottom: 0;
     display: inline-block;
   }
 }
