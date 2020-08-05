@@ -5,15 +5,24 @@ body {
 
 header {
   margin: 0 auto;
-  height: 18vh;
+  height: 23vh;
   border-bottom: 2px solid black;
-  background:  rgba(0,0,0,0.5);
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5));
   position: relative;
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  max-height: 18vh;
+  z-index: 1;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
+  font-size: 2.5vh;
   color: indigo;
 }
 
@@ -31,8 +40,13 @@ a:hover {
 
 h1 {
   margin: 0 auto;
+  line-height: 5vh;
   font-size: 5vh;
   color: white;
+}
+
+.name {
+  display: none;
 }
 
 h2 {
@@ -49,4 +63,18 @@ footer {
   text-align: center;
   color: #FFFFFF;
   background-color: #000000;
+}
+
+@media screen and (min-width: 800px) {
+  .logo {
+    margin-left: 0;
+  }
+
+  .name {
+    display: block;
+    position: absolute;
+    top: 7vh;
+    margin-left: 7.5vw;
+    z-index: 2;
+  }
 }

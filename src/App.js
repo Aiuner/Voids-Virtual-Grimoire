@@ -6,18 +6,16 @@ import ViewPost from './components/ViewPost'
 import NewPost from './components/NewPost'
 import Footer from './components/Footer'
 import './App.css';
-
-//Header and footer will appear on every page. Header contains NavBar.
+import logo from './assets/Logo.png'
 
 function App() {
   const [searchurl, setSearchurl] = useState(``);
 
-
   return (
     <>
       <header>
-        <img src="assets/Logo.png"></img>
-        <h1>Logo and Name go up here.</h1>
+        <img src={logo} className="logo" alt="Logo"/>
+        <h1 className="name">oid's Virtual Grimoire</h1>
         <NavBar setSearchurl={setSearchurl}/>
       </header>
 
