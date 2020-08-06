@@ -39,7 +39,7 @@ function NavBar(props) {
           className="hamburger-menu-button"           
           onClick={ () => setIsMenuOpen(!isMenuOpen)} alt="hamburger menu icon"/>
 
-        <div className={`menu ${(isMenuOpen) ? '' : 'hidden'}`}>
+        <div className={`menu ${(!isMenuOpen && window.innerWidth < 800) ? 'hidden' : ''}`}>
           <Search setSearchurl={props.setSearchurl}/>
           <Link to="/">Home</Link>
           <Link to="/posts/create_new_post">Create New Post</Link>
