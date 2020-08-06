@@ -34,16 +34,12 @@ function NavBar(props) {
       onScroll={handleScroll} 
       style={{position}} 
       className={position === "absolute" ? "page-top" : "page-bottom"}>
-        <div className="menu"
-          // 
-          //hamburger menu show/hide functionality
-          isMenuOpen={isMenuOpen}
-          onToggleMenu={ () => setIsMenuOpen(!isMenuOpen)}>
-          
-          <button className="hamburger-menu-button">
-            <image src={hamburgerIcon} className="hamburger"/>
-          </button>
-          
+
+        <img src={hamburgerIcon} 
+          className="hamburger-menu-button"           
+          onClick={ () => setIsMenuOpen(!isMenuOpen)} alt="hamburger menu icon"/>
+
+        <div className={`menu ${(isMenuOpen) ? '' : 'hidden'}`}>
           <Search setSearchurl={props.setSearchurl}/>
           <Link to="/">Home</Link>
           <Link to="/posts/create_new_post">Create New Post</Link>
