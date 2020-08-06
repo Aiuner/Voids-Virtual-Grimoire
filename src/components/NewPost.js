@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../assets/NewPost.css'
 
 function NewPost() {
   const [title, updateTitle] = useState('');
@@ -27,25 +28,36 @@ function NewPost() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <div className="new-post-form">
         
         <h2>Create New Post</h2>
 
-        <label htmlFor="title">Title</label>
-        <input type="text" id="title" onChange={ e => updateTitle(e.target.value)} value={title} />
+        <form onSubmit={handleSubmit}>
 
-        <label htmlFor="text">Text</label>
-        <textarea type="text" id="text" cols="30" rows="10" onChange={e => updateText(e.target.value)} value={text}></textarea>
+          <section className="form-input">
+          <label htmlFor="title">Title</label><br />
+          <input type="text" id="title" onChange={ e => updateTitle(e.target.value)} value={title} className="title-input"/>
+          </section>
 
-        <label htmlFor="mats">Materials or Ingredients</label>
-        <textarea type="text" id="mats" cols="30" rows="10" onChange={e => updateMats(e.target.value)} value={mats}></textarea>
+          <section className="form-input">
+          <label htmlFor="text">Text</label><br />
+          <textarea type="text" id="text" cols="30" rows="10" onChange={e => updateText(e.target.value)} value={text}></textarea>
+          </section>
 
-        <label htmlFor="directions">Directions</label>
-        <textarea type="text" id="directions" cols="30" rows="10" onChange={e => updateDirections(e.target.value)} value={directions}></textarea>
+          <section className="form-input">
+          <label htmlFor="mats">Materials or Ingredients</label><br />
+          <textarea type="text" id="mats" cols="30" rows="10" onChange={e => updateMats(e.target.value)} value={mats}></textarea>
+          </section>
 
-        <input type="submit" value="Submit New Post" />
+          <section className="form-input">
+          <label htmlFor="directions">Directions</label><br />
+          <textarea type="text" id="directions" cols="30" rows="10" onChange={e => updateDirections(e.target.value)} value={directions}></textarea>
+          </section>
 
-      </form>
+          <input type="submit" value="Submit New Post" />
+
+        </form>
+      </div>
     </>
   );
 }

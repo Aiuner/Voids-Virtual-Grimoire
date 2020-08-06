@@ -15,7 +15,8 @@ function App() {
     <>
       <header>
         <img src={logo} className="logo" alt="Logo"/>
-        <h1 className="name">oid's Virtual Grimoire</h1>
+        <h1 className="page-name-hidden-mobile">oid's Virtual Grimoire</h1>
+        <h1 className="page-name-hidden-desktop">Void's Virtual Grimoire</h1>
         <NavBar setSearchurl={setSearchurl}/>
       </header>
 

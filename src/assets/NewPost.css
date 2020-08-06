@@ -1,0 +1,25 @@
+.new-post-form {
+  margin: 2vh auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.form-input {
+  margin-top: 1vh;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+
+textarea, .title-input {
+  width: 75vw;
+  margin-bottom: 1vh;
+}
+
+textarea {
+  height: 15vh;
+}
+
+.title-input {
+  height: 3vh;
+}

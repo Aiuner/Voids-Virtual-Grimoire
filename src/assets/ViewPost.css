@@ -1,0 +1,15 @@
+.full-post {
+  margin: 2.5vh auto;
+  padding: 0 2vw;
+  text-align: center;
+}
+
+p {
+  padding-top: 1vh;
+  border-top: 2px solid rgba(0,0,0,0.5);
+}
+
+button {
+  position: fixed;
+  right: 1vw;
+}

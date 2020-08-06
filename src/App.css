@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+
+
 body {
   background: url('./assets/parchment-paper-bg.png') no-repeat fixed center;
   background-size: cover;
@@ -9,6 +12,16 @@ header {
   border-bottom: 2px solid black;
   background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5));
   position: relative;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #000000;
 }
 
 .logo {
@@ -39,14 +52,27 @@ a:hover {
 }
 
 h1 {
+  font-family: 'Princess Sofia', cursive;
   margin: 0 auto;
   line-height: 5vh;
   font-size: 5vh;
   color: white;
 }
 
-.name {
+.page-name-hidden-mobile {
   display: none;
+}
+
+.page-name-hidden-desktop {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 9vh;
+  left: 50%;
+  transform: translate(-50%,0);
+  font-size: 3vh;
+  line-height: 3.25vh;
+  z-index: 2;
 }
 
 h2 {
@@ -59,22 +85,32 @@ h3 {
   font-size: 2vh;
 }
 
-footer {
-  text-align: center;
-  color: #FFFFFF;
-  background-color: #000000;
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
   .logo {
     margin-left: 0;
   }
 
-  .name {
+  .page-name-hidden-mobile {
     display: block;
     position: absolute;
     top: 7vh;
     margin-left: 7.5vw;
     z-index: 2;
+  }
+
+  .page-name-hidden-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .page-name-hidden-mobile {
+    margin-left: 6.25vw;
+  }
+}
+
+@media screen and (min-width: 1801px) {
+  .page-name-hidden-mobile {
+    margin-left: 5.75vw;
   }
 }
