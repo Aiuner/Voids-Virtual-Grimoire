@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+h3 {
+  padding-top: 1vh;
+}
+
 p {
   padding-top: 1vh;
   border-top: 2px solid rgba(0,0,0,0.5);

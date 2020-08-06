@@ -37,15 +37,16 @@ function ViewPost() {
   if (post.fields) {
     return (
       <>
+      <main>
         <div className="full-post">
-          <h2>
-            {post.fields.Title} - {post.fields.Date}
-          </h2>
+          <h2>{post.fields.Title}</h2>
+          <h3>{post.fields.Date}</h3>
           <p>{post.fields.Text}</p>
           <p>{post.fields.MaterialsOrIngredients}</p>
           <p>{post.fields.Directions}</p>
           <button onClick={deletePost}>Delete This Post</button>
         </div>
+        </main>
       </>
     );
   } 

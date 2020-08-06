@@ -14,3 +14,7 @@ main {
   border-radius: 15px;
   background: rgba(211,211,211, 0.3);
 }
+
+a:visited {
+  color: #104E8B;
+}
