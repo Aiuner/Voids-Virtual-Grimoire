@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../assets/NewPost.css'
+import '../assets/styles/NewPost.css'
 
 function NewPost() {
   const [title, updateTitle] = useState('');

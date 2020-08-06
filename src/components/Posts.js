@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import '../assets/Posts.css'
+import '../assets/styles/Posts.css'
 
 
 function Posts(props) {

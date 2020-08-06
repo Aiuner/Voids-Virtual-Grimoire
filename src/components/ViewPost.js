@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import '../assets/ViewPost.css'
+import '../assets/styles/ViewPost.css'
 
 function ViewPost() {
   const params = useParams();

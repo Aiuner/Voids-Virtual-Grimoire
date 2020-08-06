@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Search from './Search';
-import '../assets/NavBar.css';
+import '../assets/styles/NavBar.css';
 import hamburgerIcon from '../assets/hamburger-svg.png';
 
 function NavBar(props) {
