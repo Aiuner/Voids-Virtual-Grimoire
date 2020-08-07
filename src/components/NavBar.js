@@ -28,6 +28,10 @@ function NavBar(props) {
     })
   );
 
+  //NavBar pops out of header if you scroll past it, making it accessible when the header is off-screen.
+
+  //When on mobile, the menu is hidden & toggleable & the hamburger is visible.
+  //When on desktop, the menu is visible & !toggleable & hamburger is hidden.
   return (
     <>
       <nav 

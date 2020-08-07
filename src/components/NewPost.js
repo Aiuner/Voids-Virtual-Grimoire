@@ -8,6 +8,7 @@ function NewPost() {
   const [mats, updateMats] = useState('');
   const [directions, updateDirections] = useState('');
 
+  //posts to the airtable
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = await axios.post("https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201", {
@@ -23,6 +24,7 @@ function NewPost() {
         'Content-Type': 'application/json'
       }
     })
+    //redirects to homepage after submit, where the new post will appear
     window.location.href="/";
   }
 

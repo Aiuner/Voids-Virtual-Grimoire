@@ -9,15 +9,18 @@ function Posts(props) {
   const [fetchPosts, updateFetchPosts] = useState(false);
   let url = null;
   if (window.location.pathname === "/") {
+    //shows most recent 7 posts in order of newest to oldest
     url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?maxRecords=7&view=Grid%20view&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc";
   }
   else if (window.location.pathname === "/posts") {
+    //shows all posts in order of most recent
     url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?view=Grid%20view&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc";
   }
   else if (window.location.pathname === "/search_results") {
+    //this url is passed around from the Search component's generated search url
     url = props.searchurl;
   }
-  else {
+  else { //error handler for url
     console.log("Error: The Posts component has been called but I don't know what to do for this pathname.")
   }
 
@@ -29,7 +32,6 @@ function Posts(props) {
               'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
             },
           });
-        //console.log(postsData.data.records);
         updatePosts(postsData.data.records); 
         }
     apiCall();
