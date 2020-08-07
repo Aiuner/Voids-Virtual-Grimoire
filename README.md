@@ -172,7 +172,8 @@ This code handles changing the url used for post axios requests based on which p
   }
   else { //error handler for url
     console.log("Error: The Posts component has been called but I don't know what to do for this pathname.")
-  }```
+  }
+```
 
 ### Code Issues & Resolutions
 
