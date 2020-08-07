@@ -8,8 +8,6 @@ The project will make use of React.js, React Router, Axios, Airtable and the Air
 
 ### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
-
 ![Mobile Wireframes](https://media.discordapp.net/attachments/447199538105810945/739826698970988604/image0.jpg?width=681&height=908)
 
 - Displays four wireframes for the mobile version. Desktop will look very similar.
@@ -17,8 +15,6 @@ The project will make use of React.js, React Router, Axios, Airtable and the Air
 <br>
 
 ### MVP
-
-> The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
 The **Void's Virtual Grimoire** MVP will focus on creating a web application that works on small screen sizes, mainly smartphones, without looking or feeling clunky. The application will be built in React.js and it will use Axios requests to GET content from and POST new content to its Airtable database. The content will be organized into categories, which can be used as search criteria or to view only certain types of content.
 
@@ -37,7 +33,7 @@ The project will utilize at least 6 components, some of which may for different 
 
 #### Libraries
 
-> Use this section to list all supporting libraries and their role in the project.
+> Defines Libraries used.
 
 |     Library      | Description                                                       |
 | :--------------: | :---------------------------------------------------------------- |
@@ -48,7 +44,7 @@ The project will utilize at least 6 components, some of which may for different 
 
 #### Data
 
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
+> Defines APIs used.
 
 |     API      | Quality Docs? | Website        | Sample Query                            |
 |  :--------:  | :-----------: | :------------- | :-------------------------------------- |
@@ -77,71 +73,68 @@ _Example Response_
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app.
-
 ```
 src
 |__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
+      |__ styles
+      |__ images (not contained in a folder)
 |__ components/
-      |__ Header.jsx
-      |__ NavBar.jsx
-      |__ Search.jsx
-      |__ Posts.jsx
-      |__ ViewPost.jsx
-      |__ NewPost.jsx
+      |__ FixLists.jsx
       |__ Footer.jsx
+      |__ NavBar.jsx
+      |__ NewPost.jsx
+      |__ Posts.jsx
+      |__ Search.jsx
+      |__ ViewPost.jsx
 ```
 
 <br>
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|  NavBar      | functional |   n   |   n   | _The NavBar will provide links to each category, the home page, and contain the Search bar. It will appear in the page Header in app.js._       |
-|   Search     |   class    |   y   |   n   | _The Search component will provide a way to search the content saved to the Airtable database via either keyword or category.._ |
-|    Home    | functional |   n   |   n   | _The Home component is just the landing page. Displays the most recent 7 posts._               |
-|   Posts      |   class    |   y   |   n   | _The Posts component will render the posts using flexbox. It will display either all posts, some posts or Search results in order of most recent to oldest depending on the pathname._      |
-| ViewPost     | functional |   n   |   n   | _Takes params to render a single post with all its info._                 |
-|    NewPost    | functional |   n   |   n   | _Used to create new posts to the airtable. Has its own page._               |
-|    Footer    | functional |   n   |   n   | _The footer will contain contact info and link back to my portfolio._ |
+| FixLists     | class      |   n   |   n   | _Reusable function to correct formatting error with retrieving lists from airtable._ |
+| Footer       | functional |   n   |   n   | _The footer will contain contact info and link back to my portfolio._ |
+| NavBar       | functional |   y   |   y   | _The NavBar will provide links to each category, the home page, and contain the Search bar. It will appear in the page Header in app.js._       |
+| NewPost      | functional |   y   |   n   | _Used to create new posts to the airtable. Has its own page._               |
+| Posts        |   class    |   y   |   y   | _The Posts component will render the posts using flexbox. It will display either all posts, some posts or Search results in order of most recent to oldest depending on the pathname._      |
+| Search       |   class    |   y   |   y   | _The Search component will provide a way to search the content saved to the Airtable database via keyword. Searches only one field in the content._ |
+| ViewPost     | functional |   y   |   n   | _Takes params to render a single post with all its info._                 |
 
 <br>
 
 #### Component Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above. 
->
-> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+>Original timetable for this project.
 
 | Task                      | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------  | :------: | :------------: | :-----------: | :---------: |
-| Header Section            |    H     |     <1 hr      |     <1 hr     |     TBD     |
-| NavBar                    |    H     |     <1 hr      |     <1 hr     |     TBD     |
+| Header Section            |    H     |     <1 hr      |     <1 hr     |    <1 hr    |
+| NavBar                    |    H     |     <1 hr      |      1 hr     |   1.5 hrs   |
 | Search                    |    -     |     -----      |      ---      |     TBD     |
-| - Set Up Search functions |    M     |     2 hrs      |      1 hr     |     TBD     |
-| - Set up Axios requests   |    M     |     6 hrs      |     <1 hr     |     TBD     |    
+| - Set Up Search functions |    M     |     2 hrs      |     2 hrs     |   3.5 hrs   |
+| - Set up Axios requests   |    M     |     6 hrs      |     2 hrs     |   5.5 hrs   |    
 | Posts                     |    -     |     -----      |      ---      |     TBD     |
-| - Set Up Axios request    |    H     |     6 hrs      |     4 hrs     |     TBD     |
-| - Render data to the DOM  |    H     |     2 hrs      |      1 hr     |     TBD     |
-| ViewPost                  |    H     |     2 hrs      |     <1 hr     |     TBD     |
-| Footer                    |    L     |     <1 hr      |      ---      |     TBD     |
-| TOTAL                     |   ---    |     - hrs      |      ---      |     TBD     |
+| - Set Up Axios request    |    H     |     6 hrs      |     4 hrs     |   9.5 hrs   |
+| - Render data to the DOM  |    H     |     2 hrs      |     2 hrs     |  11.5 hrs   |
+| ViewPost                  |    H     |     2 hrs      |      1 hr     |  12.5 hrs   |
+| Footer                    |    L     |     <1 hr      |     <1 hr     |    13 hrs   |
+| Add to airtable           |    M     |     6 hrs      |     3 hrs     |    16 hrs   |
+| FixLists                  |    L     |     <1 hr      |      1 hr     |    17 hrs   |
+| Clean Up Code/Components  |    M     |     2 hrs      |      1 hr     |    18 hrs   |
+| Styling                   |    M     |     8 hrs      |     8 hrs     |    26 hrs   |
+| TOTAL                     |   ---    |    36 hrs      |      ---      |    26 hrs   |
 
 <br>
 
 #### Helper Functions
 
-> Use this section to document all helper functions– generic functions that can be reused in other applications.
+> Section to document all helper functions– generic functions that can be reused in other applications.
 
 |  Function    | Description                                |
 | :--------:   | :----------------------------------------- |
-| handleChange | _Updates the search field input so that when you click submit, it has something to submit._ |
+| FixLists | _Corrects error with retrieving data from airtable where lists become large blocks of texts._ |
 
 <br>
 
@@ -161,7 +154,25 @@ src
 
 ### Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+This code handles changing the url used for post axios requests based on which part of the site you're on. It's a neat little way that allows me to reuse the Posts component instead of making a different component to do the same thing on each path.
+
+```
+  let url = null;
+  if (window.location.pathname === "/") {
+    //shows most recent 7 posts in order of newest to oldest
+    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?maxRecords=7&view=Grid%20view&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc";
+  }
+  else if (window.location.pathname === "/posts") {
+    //shows all posts in order of most recent
+    url = "https://api.airtable.com/v0/appVtcDvltW4WweAs/Table%201?view=Grid%20view&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc";
+  }
+  else if (window.location.pathname === "/search_results") {
+    //this url is passed around from the Search component's generated search url
+    url = props.searchurl;
+  }
+  else { //error handler for url
+    console.log("Error: The Posts component has been called but I don't know what to do for this pathname.")
+  }```
 
 ### Code Issues & Resolutions
 
